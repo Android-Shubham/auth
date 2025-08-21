@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	// "time"
 
 	"github.com/Android-Shubham/auth/internal/database"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq" // PostgreSQL driver
+	// "github.com/robfig/cron/v3"
 )
 
 type ApiConfig struct {
@@ -19,6 +21,15 @@ type ApiConfig struct {
 }
 
 func main() {
+
+	// c := cron.New()
+	// c.AddFunc("@every 1m", func() {
+	// 	// Add your cron job logic here
+	// 	fmt.Println("Cron job executed at ", time.Now())
+	// })
+	// c.Start()
+
+
 	fmt.Println("Hello, World!")
 	godotenv.Load()
 	port := os.Getenv("PORT")
